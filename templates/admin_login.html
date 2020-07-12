@@ -1,0 +1,41 @@
+
+{% extends 'common.html' %}
+
+{% block aniket %}
+    <style>
+    #title{
+        font-family: "Agency FB";
+        color: black;
+        width: 250px;
+        padding: 4px;
+        background-color: antiquewhite;
+    }
+    </style>
+    <form action="{% url 'admin_welcome' %}" method="post">
+    {% csrf_token %}
+    <table align="center" border="2">
+    <tr>
+        <th id="title">Admin Login Page</th>
+    </tr>
+    <tr>
+        <th><input type="text" placeholder="Username" name="t1"> </th>
+    </tr>
+    <tr>
+        <th><input type="password" placeholder="Password" name="t2"></th>
+    </tr>
+    <tr><th><button type="submit">Login</button> </th></tr>
+        {% if messages %}
+            <tr>
+             <th>
+                 {% for x in messages %}
+                     {{ x }}
+                 {% endfor %}
+             </th>
+            </tr>
+
+        {% endif %}
+    </table>
+    </form>
+
+{% endblock %}
+

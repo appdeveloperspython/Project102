@@ -1,0 +1,36 @@
+<html>
+<style>
+    .one{
+        font-family: "Bodoni MT Poster Compressed";
+        padding: 5px;
+        color: blueviolet;
+        background-color: coral;
+        marquee-direction: forward;
+        width: 350px;
+        font-size: 40px;
+    }
+    .two{
+        font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+        padding: 3px;
+        color: darkgreen;
+        background-color: burlywood;
+        marquee: right;
+
+    }
+</style>
+ <body>
+   <table align="center" border="2">
+       <tr><th class="one">Python with Aniket</th></tr>
+       <tr>
+           <th>
+               {% block aniket %}
+
+               {% endblock %}
+           </th>
+       </tr>
+       <tr>
+           <th class="two">Copyright@ Python with Aniket</th>
+       </tr>
+   </table>
+ </body>
+</html>
